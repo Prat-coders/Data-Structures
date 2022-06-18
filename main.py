@@ -1,8 +1,11 @@
-list1 = [-2, -5, 5, 5, 45, 34, 78, 23, 45, 67, -34, -9, -1]
-# checking each number in the list
-for i in list1:
-     # checking for all the numbers below 0 because positive numbers fall after 0
-     if i > 0:
-      print(i)
+def most_frequent(ask):
+    num_words = {}
+    for char in ask:
+        if char not in num_words:
+            num_words[char] = 1
+        else:
+            num_words[char] += 1
+    return num_words
 
 
+print(most_frequent('mississippi'))
