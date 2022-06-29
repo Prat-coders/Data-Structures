@@ -1,13 +1,15 @@
-list1 = [12, -7, 5, 64, -14]
-list2 = [12, 14, -95, 3]
-# checking each number in the list
+from collections import Counter
 
-lis = []
-for numm in list2:
-    if numm >= 0:
-        lis.append(numm)
-print(f'output for list2: {lis}')
 
-for num in list1:
-    if num >= 0:
-        print(num, end=" ")
+def most_frequent(ask):
+    num_words = {}
+    for char in ask:
+        if char not in num_words:
+            num_words[char] = 1
+        else:
+            num_words[char] += 1
+    final_output = Counter(num_words).most_common()
+    return final_output
+
+
+print(most_frequent('Mississippi'))
