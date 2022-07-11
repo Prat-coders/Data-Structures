@@ -1,15 +1,14 @@
-from collections import Counter
+n = 5
 
+# upper triangle
+for i in range(n):
+    for j in range(i + 1):
+        print("* ", end="")
+    print()
+# lower triangle
+for i in range(n):
+    for j in range(n - i - 1):
+        print("* ", end="")
+    print()
 
-def most_frequent(ask):
-    num_words = {}
-    for char in ask:
-        if char not in num_words:
-            num_words[char] = 1
-        else:
-            num_words[char] += 1
-    final_output = Counter(num_words).most_common()
-    return final_output
-
-
-print(most_frequent('Mississippi'))
+        
